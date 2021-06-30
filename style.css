@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(207, 70%, 27%);
+  --base-color-second: hsl(167, 72%, 38%);
+  --base-color-alt: hsl(346, 68%, 55%);
+  --title-color: hsl(207, 70%, 27%);
+  --text-color: hsl(207, 70%, 27%);
+  --text-color-light: hsl(0, 0%, 100%);
+  --body-color: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--body-color);
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.title {
+  font: 700 1rem var(--body-font);
+  color: var(--text-color);
+  -webkit-font-smoothing: auto;
+  cursor: pointer;
+}
+
+.container .topo {
+  color: var(--text-color-light);
+  padding: 0.625rem;
+  background: var(--base-color);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  margin-bottom: 1rem;
+}
+
+.container .topo .central {
+  color: var(--text-color-light);
+  margin-left: 0.9375rem;
+}
+
+.container .topo .call-button {
+  margin-right: 0.9375rem;
+  background: var(--base-color-second);
+  padding: 0.0625rem 0.437rem;
+  color: var(--text-color-light);
+  border-radius: 0.25rem;
+  display: inline-flex;
+}
+
+.container .call-button:hover {
+  background: var(--base-color-alt);
+}
+
+nav .header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  margin: 0.75rem auto;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--base-color-alt);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--base-color-alt);
+
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+
+  transition: widht 0.2s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+  position: relative;
+}
+
+nav .menu ul {
+  display: none;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--body-color);
+
+  position: fixed;
+  top: 150px;
+  left: 0;
+
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu ul {
+  display: grid;
+  margin-top: 0.625rem;
+  height: 15vh;
+  width: 100vw;
+}
+
+.toggle {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .header-bar .icon-open {
+  cursor: pointer;
+  color: var(--base-color);
+}
+
+.slider .carousel {
+  margin-top: 1.5rem;
+}
+
+.swiper-slide {
+  height: 100vh;
+}
