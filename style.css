@@ -145,17 +145,18 @@ nav .menu ul {
 
   background: var(--body-color);
   overflow: hidden;
-  height: 25vh;
-  width: 35vw;
+  height: 30vh;
+  width: 40vw;
   top: 50px;
-  left: 255px;
+  left: 180px;
+  padding: 50px;
 
   position: absolute;
 
   display: grid;
   place-content: center;
   z-index: 999;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 nav.show .menu ul {
@@ -482,4 +483,3 @@ footer .social a:hover {
 .city-localization .localization p {
   margin-left: 8px;
 }
-
